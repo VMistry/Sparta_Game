@@ -74,3 +74,42 @@ function colorChoise(number){
       break;
   }
 }
+
+//triggered when div is clicked on to.
+function clickAction(){
+  //push selected element id in to playerInsert array.
+  playerInsert.push(this.id);
+  console.log(playerInsert);
+  //if statment to check if the user has inserted the right amount of number in to game.
+  if(playerInsert.length == numberFlash){
+    //Check for errors.
+    errorFound = checkForError(arraySequence, playerInsert);
+    //If there was no mistake, create a new level.
+    if(errorFound == false){
+      createLevel();
+    }
+    else{
+      if(player == 1){
+        $('#updatingTXT1').text("Player 2 wins");
+      }
+      else{
+        $('#updatingTXT1').text("Player 1 wins");
+      }
+    }
+  }
+}
+
+//compare the computer generated array with the array created by player.
+function checkForError(computerInsert, playerInsert){
+  //So far no errors detected.
+  var foundError = false;
+  //For loop to chech each element of the array.
+  for (var i = 0; i < computerInsert.length; i++) {
+    //If the input is not the same as the computer generation, made error as true.
+    if(computerInsert[i] != playerInsert[i]){
+      foundError = true;
+      break;
+    }
+  }
+  return foundError;
+}
