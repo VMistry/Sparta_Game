@@ -1,13 +1,17 @@
+/* --------------Classes-------------- */
+/* Size of screen */
 .screen{
   border:solid 1px black;
-  height: 600px;
+  height: 650px;
   padding:20px;
 }
 
+/* Center Title */
 .title{
   text-align:center;
 }
 
+/* Display buttons */
 .display{
   border:solid 1px black;
   height: 275px;
