@@ -15,7 +15,7 @@ var errorFound = false;
 createLevel();
 
 //Look at if the button has been pressed or not.
-clickableOBJ.on("click", clickAction);
+clickableOBJ.on("mousedown", clickAction);
 
 //This is used to create the squence for the level.
 function createLevel(){
@@ -79,6 +79,7 @@ function colorChoise(number){
 function clickAction(){
   //push selected element id in to playerInsert array.
   playerInsert.push(this.id);
+  colorChanger(this.id);
   console.log(playerInsert);
   //if statment to check if the user has inserted the right amount of number in to game.
   if(playerInsert.length == numberFlash){
@@ -112,4 +113,25 @@ function checkForError(computerInsert, playerInsert){
     }
   }
   return foundError;
+}
+
+function colorChanger(div){
+  switch (div) {
+    case "red":
+      $("#red").css('background-color', 'red');
+      break;
+    case "blue":
+      $("#blue").css('background-color', 'blue');
+      break;
+    case "green":
+      $("#green").css('background-color', 'green');
+      break;
+    case "yellow":
+      $("#yellow").css('background-color', 'yellow');
+      break;
+  }
+  setInterval(function(){
+    $("#" + div + "").css('background-color', 'white');
+
+  }, 500);
 }
