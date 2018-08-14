@@ -2,7 +2,7 @@
 /* Size of screen */
 .screen{
   border:solid 1px black;
-  height: 650px;
+  height: 740px;
   padding:20px;
 }
 
@@ -15,4 +15,18 @@
 .display{
   border:solid 1px black;
   height: 275px;
+  padding: 0px 0px;
+}
+
+ /* Style for all innerSquares */
+.innerSquare {
+  maging:0px 0px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.buttonArea{
+  margin-top:10px;
+  text-align:center;
 }
