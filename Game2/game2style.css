@@ -21,7 +21,7 @@ button{
 /* Size of screen */
 .screen{
   border:solid 1px black;
-  height: 610px;
+  height: 650px;
   padding:0px;
   background-color: grey;
 }
@@ -84,4 +84,9 @@ button{
   font-size: 200%;
   float:left;
   margin-left:7.5%;
+}
+
+#enterNewGame{
+  margin-top:10px;
+  float:left;
 }
