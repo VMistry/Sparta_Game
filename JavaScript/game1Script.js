@@ -22,6 +22,8 @@ var yellow = $(".innerSquare", "#yellow").css('background-color', 'yellow').hide
 //Start the game by creating the sequence.
 $("#patternSet").on("click", createLevel);
 
+
+
 //This is used to create the squence for the level.
 async function createLevel(){
   $('#updatingTXT3').text("Processing...");

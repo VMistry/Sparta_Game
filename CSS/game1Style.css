@@ -69,3 +69,13 @@ button{
   padding:20px;
   background-color: grey;
 }
+
+.saveArea{
+  border:solid 1px black;
+  height: 100px;
+  padding:20px;
+  background-color: grey;
+  color:black;
+  margin-top:5px;
+  margin-bottom:5px;
+}
