@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viren's Game</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- My own css -->
+    <link rel="stylesheet" href="../CSS/game2Style.css">
+  </head>
+  <!-- The navbar stretches across the width of the page -->
+  <body class="container-fluid">
+    <!-- First row for the title -->
+    <nav class="navbar-fluid navbar-inverse" data-offset-top="197">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">VM</a>
+        </div>
+        <ul class="nav navbar-nav" style="float:left;">
+          <li class="hidden-xs hidden-sm"><a href="">Home</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game1.html">Memory Game</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game2.html">Rock, Paper, Scissors</a></li>
+          <li class="hidden-xs hidden-sm"><a href="">Pillar</a></li>
+          <li class="dropdown" style="width:200px;">
+            <a class="dropdown-toggle dropdown hidden-md hidden-lg" data-toggle="dropdown" href="#">
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="" >Home</a></li>
+              <li><a href="../Game1/Game1.html">Memory Game</a></li>
+              <li><a href="../Game2/Game2.html">Rock, Paper, Scissors</a></li>
+              <li><a href="" >Pillar</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="row">
+        <!-- Title of the page -->
+        <h1 class="col-xs-12 title">Viren's Game</h1>
+        <h2 class="col-xs-12 titleSub">Rock, Paper, Scissors</h2>
+    </header>
+    <!-- This holds the games -->
+    <section class="row">
+      <!-- Move the screen to the center of the page -->
+      <div class="col-xs-6 col-xs-offset-3 screen">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3 scoreBoard">
+            <p class="playerScore">[Player 1 : <span id="player1Score" >0</span>]</p>
+            <p class="playerScore">[Player 2 : <span id="player2Score">0</span>]</p>
+          </div>
+        </div>
+        <!-- This  -->
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3 scoreBoard">
+            <button id="enterNewGame" name="button">New Game</button>
+            <h4 id="editedText3">Start new game</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 display">
+            <h1>Player 1's choise: <span id="editedText1">Choice</span></h1>
+            <h1>VS</h1>
+            <h1>Player 2's choise: <span id="editedText2">Choice</span></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 turnDisplay">
+            <h3 id="turnText">Players 1's turn</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 buttonSection">
+            <button class="choseButton" type="button" name="button" id="rock">Rock</button>
+            <button class="choseButton" type="button" name="button" id="paper">Paper</button>
+            <button class="choseButton" type="button" name="button" id="scissors">Scissors</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!-- JQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- My scripts -->
+  <script type="text/javascript" src="../JavaScript/game2Script.js"></script>
+</html>
