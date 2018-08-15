@@ -31,18 +31,16 @@ function StartRound(){
 
 //Takes in player 1's and players two input, then checks who won
 function selectionButton(){
-  //If it's player 1's turn..
-  if(playerTurn != 2){
     //assign selection with player 1
     player1 = this.id;
     //chnage to player 2
     playerTurn++;
     //show its player 2's turn
     $("#turnText").text("Players 2's turn");
-  }
-  else{
+
     //Assign selection with player 2
-    player2 = this.id;
+    var computerChoice = Math.floor(Math.random() * 3 + 1);
+    player2 = playerChoise(computerChoice);
     //Display players choice
     $("#editedText1").text(player1.toUpperCase());
     $("#editedText2").text(player2.toUpperCase());
@@ -50,7 +48,6 @@ function selectionButton(){
     checker(player1, player2);
     //turn off the choice button
     $(".choseButton").off("click");
-  }
 }
 
 //check who wins
@@ -97,4 +94,20 @@ function checker(player1, player2){
   $(".choseButton").off("click");
   $("#enterNewGame").on("click", StartRound);
 
+}
+
+function playerChoise(number){
+  switch (number) {
+    case 1:
+      return "rock";
+      break;
+
+    case 2:
+      return "paper";
+      break;
+
+    case 3:
+      return "scissors";
+      break;
+  }
 }
