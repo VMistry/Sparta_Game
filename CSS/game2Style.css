@@ -1,3 +1,4 @@
+/* --------------Tags----------------- */
 body{
   /* Get the image */
   background-image: url("../Images/Blackwood.jpg");
@@ -11,6 +12,7 @@ body{
   background-size: cover;
   color:white;
 }
+/* Links to all buttons within HTML */
 button{
   color:black;
   width:30%;
@@ -35,6 +37,7 @@ button{
   padding-top: 15px;
 }
 
+/* Name of game */
 .titleSub{
   margin-top:0px;
   text-align:center;
@@ -43,24 +46,28 @@ button{
   padding-top: 15px;
 }
 
+/* Area of where game is shown */
 .display{
   border:solid 1px black;
   height: 400px;
   padding: 0px 0px;
 }
 
+/* Displays whos turn it is */
 .turnDisplay{
   height: 50px;
   padding: 0px 0px;
   text-align: center;
 }
 
+/* buttons representing rock, paper, scissors */
 .buttonSection{
   height: 100px;
   padding: 0px 0px;
   text-align: center;
 }
 
+/* Displays how many game won by each player */
 .scoreBoard{
   height: 50px;
   padding: 5px 0px;
@@ -75,17 +82,20 @@ button{
   background-color: white;
 }
 
+/* This will be the area where the buttons for rock, paper, scissors will be placed */
 .buttonArea{
   margin-top:10px;
   text-align:center;
 }
 
+/* used to display yhe scores at the top */
 .playerScore{
   font-size: 200%;
   float:left;
   margin-left:7.5%;
 }
-
+/* -----------------ID----------------- */
+/* This target the new game button, to make it float left */
 #enterNewGame{
   margin-top:10px;
   float:left;

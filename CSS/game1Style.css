@@ -32,6 +32,7 @@ button{
   padding-top: 15px;
 }
 
+/* Name of game */
 .titleSub{
   margin-top:0px;
   text-align:center;
@@ -40,7 +41,7 @@ button{
   padding-top: 15px;
 }
 
-/* Display buttons */
+/* Area of where game is shown */
 .display{
   border:solid 1px black;
   height: 275px;
@@ -55,11 +56,13 @@ button{
   background-color: white;
 }
 
+/* This will be the area where the buttons for memory game will be placed */
 .buttonArea{
   margin-top:10px;
   text-align:center;
 }
 
+/* This is for the how to play section */
 .howTwoPlay{
   border:solid 1px black;
   height: 740px;
