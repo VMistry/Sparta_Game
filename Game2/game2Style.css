@@ -13,13 +13,16 @@ body{
 }
 button{
   color:black;
+  width:30%;
+  margin-top:35px;
 }
+
 /* --------------Classes-------------- */
 /* Size of screen */
 .screen{
   border:solid 1px black;
-  height: 740px;
-  padding:20px;
+  height: 610px;
+  padding:0px;
   background-color: grey;
 }
 
@@ -40,16 +43,33 @@ button{
   padding-top: 15px;
 }
 
-/* Display buttons */
 .display{
   border:solid 1px black;
-  height: 275px;
+  height: 400px;
   padding: 0px 0px;
+}
+
+.turnDisplay{
+  height: 50px;
+  padding: 0px 0px;
+  text-align: center;
+}
+
+.buttonSection{
+  height: 100px;
+  padding: 0px 0px;
+  text-align: center;
+}
+
+.scoreBoard{
+  height: 50px;
+  padding: 5px 0px;
+  text-align: center;
 }
 
  /* Style for all innerSquares */
 .innerSquare {
-  maging:0px 0px;
+  margin:0px 0px;
   height: 100%;
   width: 100%;
   background-color: white;
@@ -58,4 +78,10 @@ button{
 .buttonArea{
   margin-top:10px;
   text-align:center;
+}
+
+.playerScore{
+  font-size: 200%;
+  float:left;
+  margin-left:7.5%;
 }
