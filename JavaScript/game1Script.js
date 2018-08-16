@@ -12,6 +12,8 @@ var player = 1;
 //This holds a boolean value saying if the user has made a mistake.
 var errorFound = false;
 
+var winner = "";
+
 
 //assign a background colour to all the sections on the screen.
 var red = $(".innerSquare", "#red").css('background-color', 'red').hide();
@@ -21,13 +23,14 @@ var yellow = $(".innerSquare", "#yellow").css('background-color', 'yellow').hide
 
 //Start the game by creating the sequence.
 $("#patternSet").on("click", createLevel);
-
+$("#submit").off("click");
 
 
 //This is used to create the squence for the level.
 async function createLevel(){
   $('#updatingTXT3').text("Processing...");
   //Reset the below variables.
+  winner = "";
   playerInsert = [];
   amountInsert = 0;
   createLevelPattern(player);
@@ -119,11 +122,14 @@ function clickAction(){
       if(player == 1){
         $('#updatingTXT1').text("Player 2 wins");
         clickableOBJ.off("click");
+        winner = ""+ $("#player2").val() +"";
       }
       else{
         $('#updatingTXT1').text("Player 1 wins");
         clickableOBJ.off("click");
+        winner = ""+ $("#player1").val() +"";
       }
+      $("#submit").on("click", loginResults);
     }
     else{
       $("#patternSet").on("click", createLevel);
@@ -197,6 +203,58 @@ async function colorChanger(div, number){
   }
 }
 
+function loginResults(){
+  var currentGame = {};
+
+  var gameID = ""+ $("#nameGame").val() +"";
+  currentGame["Player1"] = ""+ $("#player1").val() +"";
+  currentGame["Player2"] = ""+ $("#player2").val() +"";
+  currentGame["Level"] = numberFlash;
+  currentGame["Winner"] = winner;
+  localStorage.setItem(JSON.stringify(gameID), JSON.stringify(currentGame));
+}
+
+function scoreBoard(){
+  var score = [localStorage.length];
+
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    var valuer = JSON.parse(localStorage[key]);
+    var data = {};
+    data.Level = valuer.Level;
+    data.Player1 = valuer.Player1;
+    data.Player2 = valuer.Player2;
+    data.Winner = valuer.Winner;
+    score[i] = data;
+  }
+
+  score.sort(function (a,b){
+    return b.Level - a.Level;
+  });
+
+  var Board = "<table>";
+  Board += "<tr><th>Rank</th> <th>Level</th> <th>Player 1</th> <th>Player 2</th> <th>Winner</th> </tr>";
+  var i;
+  for (i = 0; i < score.length; i++) {
+    //gets the top ten people.
+    if(!(i === 10)){
+      var value = score[i];
+      Board += "<tr><th>" + (i + 1) + "</th> <th>" + value.Level + "</th> <th>" + value.Player1 + "</th> <th>" + value.Player2 + "</th> <th>" + value.Winner + "</th> </tr>";
+    }
+    else{
+      break;
+    }
+  }
+  var goes = 10 - i;
+  for (var j = 0; j < goes.length; i++) {
+   Board += "<tr> <td>" + (j + i + 1) + "</td> <td></td> <td></td> <td></td> <td></td> </tr>";
+  }
+  Board += "</table>";
+  $("#LeaderBoard").html(Board);
+}
+
+
+
 $("#refresh").on("click", function(){
   location.reload();
-})
+});

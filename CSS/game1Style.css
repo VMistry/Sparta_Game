@@ -14,6 +14,19 @@ body{
 button{
   color:black;
 }
+
+table{
+  border:1px solid black;
+  width:100%;
+  background-color: grey;
+}
+
+th, td{
+  border:1px solid black;
+  width:10px;
+  text-align: center;
+  font-size:25px;
+}
 /* --------------Classes-------------- */
 /* Size of screen */
 .screen{
@@ -72,10 +85,11 @@ button{
 
 .saveArea{
   border:solid 1px black;
-  height: 100px;
+  height: 250px;
   padding:20px;
   background-color: grey;
   color:black;
   margin-top:5px;
   margin-bottom:5px;
+  text-align: center;
 }

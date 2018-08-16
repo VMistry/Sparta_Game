@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../CSS/game1Style.css">
   </head>
   <!-- The navbar stretches across the width of the page -->
-  <body class="container-fluid">
+  <body class="container-fluid" onload="scoreBoard()">
     <!-- First row for the title -->
     <nav class="navbar-fluid navbar-inverse" data-offset-top="197">
       <div class="container-fluid">
@@ -88,22 +88,30 @@
       </div>
     </section>
     <section class="col-xs-6 col-xs-offset-3 saveArea">
+
       <h4>Save your score</h4>
-      <form class="saveForm" action="" method="post">
-        Player 1: <input id="player1" type="text" name="player 1" value="Player1">
-        Player 2: <input id="player2" type="text" name="player 2" value="Player2">
-        <input id="submit" type="submit" value="Submit">
-      </form>
+      <div class="saveForm">
+        Name of Game: <input id="nameGame" type="text" name="nameGame" value="nameGame"><br><br>
+        Player 1: <input id="player1" type="text" name="player 1" value="Player1"><br><br>
+        Player 2: <input id="player2" type="text" name="player 2" value="Player2"><br><br>
+        <button id="submit">Submit</button>
+      </div>
+
     </section>
-    <article class="row">
-      <!-- Move the screen to the center of the page -->
+    <!-- <article class="row">
       <div class="col-xs-6 col-xs-offset-3 howTwoPlay">
         <h3>How to Play</h3>
         <div class="">
 
         </div>
       </div>
-    </article>
+    </article> -->
+    <section class="row">
+      <div class="col-xs-12">
+        <h3>LeaderBoard</h3>
+        <p id="LeaderBoard"></p>
+      </div>
+    </section>
   </body>
   <!-- JQuery Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
