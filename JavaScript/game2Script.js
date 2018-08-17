@@ -11,8 +11,11 @@ $("#submit").on("click", loginResults);
 //Turn on the new game button to start a new game.
 $("#enterNewGame").on("click", StartRound);
 
+
 //This will start off the new game by resetting the text and players turn.
 function StartRound(){
+  $("#playerChoice").hide();
+  $("#computerChoice").hide();
   // Make player 1 start first
   playerTurn = 1;
   //turn off make new game button
@@ -42,17 +45,54 @@ function selectionButton(){
     player2 = playerChoise(computerChoice);
     //Display players choice
     $("#editedText1").text(player1.toUpperCase());
+    backgroundImageChange($("#playerChoice"), player1, "right");
+    $("#playerChoice").fadeTo("slow", 1);;
+
     $("#editedText2").text(player2.toUpperCase());
+    backgroundImageChange($("#computerChoice"), player2, "left");
+    $("#computerChoice").fadeTo("slow", 1);
     //Check if the play one or player two wins.
     checker(player1, player2);
     //turn off the choice button
     $(".choseButton").off("click");
 }
+function backgroundImageChange(divID, player, pos){
+  if(pos == "left"){
+    if(player == "rock"){
+      divID.css("background-image", "url(" + "../Images/leftRock.jpg" + ")");
+      divID.css("background-color", "rgba(255, 240, 0, 1)");
+    }
+    else if(player == "paper"){
+      divID.css("background-image", "url(" + "../Images/leftPaper.jpg" + ")");
+      divID.css("background-color", "rgba(255, 240, 0, 1)");
+    }
+    else if(player == "scissors"){
+      divID.css("background-image", "url(" + "../Images/leftScissors.jpg" + ")");
+      divID.css("background-color", "rgba(255, 240, 0, 1)");
+    }
+  }
+  else if(pos == "right"){
+    if(player == "rock"){
+      divID.css("background-image", "url(" + "../Images/rightRock.jpg" + ")");
+      divID.css("background-color", "rgba(255, 240, 0, 1)");
+    }
+    else if(player == "paper"){
+      divID.css("background-image", "url(" + "../Images/rightPaper.jpg" + ")");
+      divID.css("background-color", "rgba(255, 240, 0, 1)");
+    }
+    else if(player == "scissors"){
+      divID.css("background-image", "url(" + "../Images/rightScissors.jpg" + ")");
+      divID.css("background-color", "rgba(255, 240, 0, 1)");
+    }
+  }
+}
+
 
 //check who wins
 function checker(player1, player2){
   if(player1 == player2){
     $("#turnText").text("Both equally matched: Draw");
+
   }
 
   else if(player1 == "rock"){

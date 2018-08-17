@@ -18,13 +18,13 @@ button{
   width:30%;
   margin-top:35px;
 }
-
+/* This will effect the table tages within the html page */
 table{
   border:1px solid black;
   width:100%;
   background-color: grey;
 }
-
+/* Thsi will effect the header and data cells within the website */
 th, td{
   border:1px solid black;
   width:10px;
@@ -107,7 +107,7 @@ th, td{
   float:left;
   margin-left:7.5%;
 }
-
+/* This will be the area where I will say the players name, result */
 .saveArea{
   border:solid 1px black;
   height: 300px;
@@ -121,29 +121,74 @@ th, td{
   float:left;
   margin-left:30px;
 }
-
+/* This is the style for the buttons within the html */
 .saveArea button{
   width:100px;
 }
-
+/* This edits the new game section */
 .newGame{
   margin:10px 0px;
   padding-left: 120px;
 }
+/* This will edit the button for entering a new game */
 .newGame button{
   width: 200px;
 
 }
 
-.howTwoPlay{
+/* This edits the how to play section of the page */
+.howToPlay{
   border:solid 1px black;
   height: auto;
-  padding:0px 10px;
+  padding:10px;
   background-color: grey;
+}
+/* This will hold rock, paper, scissors button */
+.selectorDisplay{
+  height: 160px;
+  border:solid 1px black;
+  padding:0px 0px;
+}
+
+/* This will target all the h3 elements within the selectorDisplay */
+.selectorDisplay h3{
+  margin:0px 0px;
+  height:40px;
+}
+/* This will display the vs area. */
+.vsDisplay{
+  text-align: center;
+  height: 75px;
+  border:solid 1px white;
+  background-color: black;
+}
+/* This will hold what both computer and player have chosen */
+.choiceTitle{
+  background-color:rgba(130,130,130, 0.8);
+}
+
+#computerChoice{
+  /* Center and scale the image nicely */
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color:white;
+}
+#playerChoice{
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color:white;
 }
 /* -----------------ID----------------- */
 /* This target the new game button, to make it float left */
 #enterNewGame{
   margin-top:10px;
   float:left;
+}
+
+#howToPlayTxt{
+  background-color:black;
+  font-size: 16px;
 }

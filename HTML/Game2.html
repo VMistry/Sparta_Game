@@ -1,3 +1,4 @@
+<!-- Get it to do the best out of 5 -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -76,14 +77,14 @@
         </div>
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 display">
-            <div class="col-xs-12" style="height: 160px; border:solid 1px black;">
-              <h1>Player's choise: <span id="editedText1">Choice</span></h1>
+            <div id="playerChoice" class="col-xs-12 selectorDisplay">
+              <h3 class="choiceTitle">Player's choise: <span id="editedText1"></span></h1>
             </div>
-            <div class="col-xs-12" style="text-align: center; height: 75px; border:solid 1px black;">
+            <div class="col-xs-12 vsDisplay">
               <h1>VS</h1>
             </div>
-            <div class="col-xs-12" style="height: 160px; border:solid 1px black;">
-              <h1>Computer's choise: <span id="editedText2">Choice</span></h1>
+            <div id="computerChoice" class="col-xs-12 selectorDisplay">
+              <h3 class="choiceTitle">Computer's choise: <span id="editedText2"></span></h1>
             </div>
           </div>
         </div>
@@ -103,17 +104,17 @@
       <section class="col-xs-2 saveArea">
         <h4>Save your score</h4>
         <div class="saveForm">
-          Name of Game: <input id="nameGame" type="text" name="nameGame" value="nameGame"><br><br>
-          Player 1: <input id="player1" type="text" name="player 1" value="Player1"><br><br>
+          Name of Game: <input id="nameGame" type="text" name="nameGame" placeholder="nameGame"><br><br>
+          Player 1: <input id="player1" type="text" name="player 1" placeholder="Player1"><br><br>
           <button id="submit">Submit</button>
         </div>
       </section>
     </section>
     <article class="row">
       <!-- Move the screen to the center of the page -->
-      <div class="col-xs-6 col-xs-offset-3 howTwoPlay">
+      <div class="col-xs-6 col-xs-offset-3 howToPlay">
         <h3>How to Play</h3>
-        <ol>
+        <ol id="howToPlayTxt">
           <li>To start the game, you would need to press “New Game”. This will start up the function which will unlock buttons for Rock, Paper and Scissor. </li>
           <li>Once you have clicked “New Game”, you would then need to select either the Rock, Paper or scissors button. </li>
           <li>Once you have chosen a button, the computer will generate its own choice. It would then see who won depending on what both you and the computer has chosen. The winner will gain one point.</li>

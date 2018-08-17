@@ -1,3 +1,4 @@
+<!-- Get player 2 to have a go -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -61,6 +62,9 @@
           <div id="red" class="col-xs-3 col-xs-offset-3  display redTile">
             <div class="innerSquare redTile">
             </div>
+            <audio id="myAudio">
+              <source src="../Sound/Sound1.mp3" type="audio/mp3">
+            </audio>
           </div>
           <!-- Blue button display -->
           <div id="blue" class="col-xs-3 display blueTile">
@@ -90,9 +94,9 @@
         <div id="popupForm" class="model">
           <h4>Save your score</h4>
           <div class="saveForm">
-            Name of Game: <input id="nameGame" type="text" name="nameGame" value="nameGame"><br><br>
-            Player 1: <input id="player1" type="text" name="player 1" value="Player1"><br><br>
-            Player 2: <input id="player2" type="text" name="player 2" value="Player2"><br><br>
+            Name of Game: <input id="nameGame" type="text" name="nameGame" placeholder="nameGame"><br><br>
+            Player 1: <input id="player1" type="text" name="player 1" placeholder="Player1"><br><br>
+            Player 2: <input id="player2" type="text" name="player 2" placeholder="Player2"><br><br>
             <button id="submit">Submit</button>
           </div>
         </div>
@@ -100,9 +104,9 @@
     </section>
     <article class="row">
       <!-- Move the screen to the center of the page -->
-      <div class="col-xs-6 col-xs-offset-3 howTwoPlay">
+      <div class="col-xs-6 col-xs-offset-3 howToPlay">
         <h3>How to Play</h3>
-        <ol>
+        <ol id="howToPlayTxt">
           <li>To play Simon says, you would first need to click on to ready button.  This will then display a colour sequence, which would then need to be replicate.</li>
           <li>You would need to wait until the sequence has finished. You will know when it has finished, by seeing the text below changes from “processing…” to “ready”. </li>
           <li>You would then replicate the sequence by pressing on to the tiles in the order of when they were lit.</li>

@@ -129,6 +129,7 @@ function clickAction(){
         clickableOBJ.off("click");
         winner = ""+ $("#player1").val() +"";
       }
+      $("#updatingTXT3").text("End of game");
     }
     else{
       $("#patternSet").on("click", createLevel);
