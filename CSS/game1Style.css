@@ -1,0 +1,81 @@
+body{
+  /* Get the image */
+  background-image: url("../Images/Blackwood.jpg");
+  background-color: grey;
+  /* Full height */
+  height: 600px;
+  /* Center and scale the image nicely */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+}
+button{
+  color:black;
+}
+/* --------------Classes-------------- */
+/* Size of screen */
+.screen{
+  border:solid 1px black;
+  height: 740px;
+  padding:20px;
+  background-color: grey;
+}
+
+/* Center Title */
+.title{
+  margin-top:0px;
+  text-align:center;
+  height: 75px;
+  background-color: rgba(125, 125, 125, 0.5);(1,1,1,1);
+  padding-top: 15px;
+}
+
+/* Name of game */
+.titleSub{
+  margin-top:0px;
+  text-align:center;
+  height: 75px;
+  background-color: rgba(125, 125, 125, 0);(1,1,1,1);
+  padding-top: 15px;
+}
+
+/* Area of where game is shown */
+.display{
+  border:solid 1px black;
+  height: 275px;
+  padding: 0px 0px;
+}
+
+ /* Style for all innerSquares */
+.innerSquare {
+  maging:0px 0px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+/* This will be the area where the buttons for memory game will be placed */
+.buttonArea{
+  margin-top:10px;
+  text-align:center;
+}
+
+/* This is for the how to play section */
+.howTwoPlay{
+  border:solid 1px black;
+  height: 740px;
+  padding:20px;
+  background-color: grey;
+}
+
+.saveArea{
+  border:solid 1px black;
+  height: 100px;
+  padding:20px;
+  background-color: grey;
+  color:black;
+  margin-top:5px;
+  margin-bottom:5px;
+}

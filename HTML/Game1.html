@@ -11,23 +11,21 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-
     <!-- My own css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/game1Style.css">
   </head>
   <!-- The navbar stretches across the width of the page -->
   <body class="container-fluid">
     <!-- First row for the title -->
-    <nav class="navbar-fluid navbar-inverse" data-spy="affix" data-offset-top="197">
+    <nav class="navbar-fluid navbar-inverse" data-offset-top="197">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><i class="fas fa-address-card"></i></a>
+          <a class="navbar-brand" href="#">VM</a>
         </div>
         <ul class="nav navbar-nav" style="float:left;">
           <li class="hidden-xs hidden-sm"><a href="">Home</a></li>
-          <li class="hidden-xs hidden-sm"><a href="../Game1/Game1.html">Memory Game</a></li>
-          <li class="hidden-xs hidden-sm"><a href="../Game2/Game2.html">Rock, Paper, Scissors</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game1.html">Memory Game</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game2.html">Rock, Paper, Scissors</a></li>
           <li class="hidden-xs hidden-sm"><a href="">Pillar</a></li>
           <li class="dropdown" style="width:200px;">
             <a class="dropdown-toggle dropdown hidden-md hidden-lg" data-toggle="dropdown" href="#">
@@ -35,8 +33,8 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="" >Home</a></li>
-              <li><a href="../Game1/Game1.html">Memory Game</a></li>
-              <li><a href="../Game2/Game2.html">Rock, Paper, Scissors</a></li>
+              <li><a href="Game1.html">Memory Game</a></li>
+              <li><a href="Game2.html">Rock, Paper, Scissors</a></li>
               <li><a href="" >Pillar</a></li>
             </ul>
           </li>
@@ -89,9 +87,26 @@
         </section>
       </div>
     </section>
+    <section class="col-xs-6 col-xs-offset-3 saveArea">
+      <h4>Save your score</h4>
+      <form class="saveForm" action="" method="post">
+        Player 1: <input id="player1" type="text" name="player 1" value="Player1">
+        Player 2: <input id="player2" type="text" name="player 2" value="Player2">
+        <input id="submit" type="submit" value="Submit">
+      </form>
+    </section>
+    <article class="row">
+      <!-- Move the screen to the center of the page -->
+      <div class="col-xs-6 col-xs-offset-3 howTwoPlay">
+        <h3>How to Play</h3>
+        <div class="">
+
+        </div>
+      </div>
+    </article>
   </body>
   <!-- JQuery Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- My scripts -->
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="../JavaScript/game1Script.js"></script>
 </html>
