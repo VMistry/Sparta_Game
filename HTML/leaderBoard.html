@@ -12,7 +12,7 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- My own css -->
-  <link rel="stylesheet" href="../css/indexStyle.css">
+  <link rel="stylesheet" href="../css/LeaderBoardStyle.css">
 </head>
 <!-- The navbar stretches across the width of the page -->
 <body class="container-fluid" onload="scoreBoard()">
@@ -44,20 +44,31 @@
   <header class="row">
       <!-- Title of the page -->
       <h1 class="col-xs-12 title">Viren's Game</h1>
-      <h2 class="col-xs-12 titleSub">Home Page</h2>
+      <h2 class="col-xs-12 titleSub">LeaderBoard</h2>
   </header>
-  <!-- This holds the games -->
+  <!-- This holds the table for games 1 -->
   <div class="col-xs-8 col-xs-offset-2 display">
-    <div class="header"><h2>Available games</h2></div>
-    <a href="Game1.html"><div class="gameOneImage">
-      <h2 class="imageHeading">Simon Says</h2>
-    </div></a>
-    <a href="Game1.html"><div class="gameTwoImage">
-      <h2 class="imageHeading">Rock, Paper, Scissors</h2>
-    </div></a>
+    <section class="row">
+      <div class="col-xs-12">
+        <div class="header">
+          <h2>Simon Says leaderBoard</h2>
+        </div>
+        <p id="LeaderBoard"></p>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-xs-12">
+        <div class="header">
+          <h2>Rock, Paper, Scissors leaderBoard</h2>
+        </div>
+        <p id="LeaderBoard2"></p>
+      </div>
+    </section>
   </div>
+  <!-- This holds the table for games 1 -->
 </body>
 <!-- JQuery Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- My scripts -->
+<script type="text/javascript" src="../JavaScript/leaderBoardScript.js"></script>
 </html>

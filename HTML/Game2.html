@@ -14,8 +14,6 @@
     <!-- My own css -->
 
     <link rel="stylesheet" href="../CSS/game2Style.css">
-
-    <link rel="stylesheet" href="game2Style.css">
   </head>
   <!-- The navbar stretches across the width of the page -->
   <body class="container-fluid">
@@ -26,19 +24,19 @@
           <a class="navbar-brand" href="#">VM</a>
         </div>
         <ul class="nav navbar-nav" style="float:left;">
-          <li class="hidden-xs hidden-sm"><a href="">Home</a></li>
-          <li class="hidden-xs hidden-sm"><a href="Game1.html">Memory Game</a></li>
+          <li class="hidden-xs hidden-sm"><a href="index.html">Home</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game1.html">Simon Says</a></li>
           <li class="hidden-xs hidden-sm"><a href="Game2.html">Rock, Paper, Scissors</a></li>
-          <li class="hidden-xs hidden-sm"><a href="">Pillar</a></li>
+          <li class="hidden-xs hidden-sm"><a href="leaderBoard.html">LeaderBoard</a></li>
           <li class="dropdown" style="width:200px;">
             <a class="dropdown-toggle dropdown hidden-md hidden-lg" data-toggle="dropdown" href="#">
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="" >Home</a></li>
-              <li><a href="../Game1/Game1.html">Memory Game</a></li>
-              <li><a href="../Game2/Game2.html">Rock, Paper, Scissors</a></li>
-              <li><a href="" >Pillar</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Game1.html">Simon Says</a></li>
+              <li><a href="Game2.html">Rock, Paper, Scissors</a></li>
+              <li><a href="leaderBoard.html" >LeaderBoard</a></li>
             </ul>
           </li>
         </ul>
@@ -54,28 +52,44 @@
       <!-- Move the screen to the center of the page -->
       <div class="col-xs-6 col-xs-offset-3 screen">
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 scoreBoard">
-            <p class="playerScore">[Player 1 : <span id="player1Score" >0</span>]</p>
-            <p class="playerScore">[Player 2 : <span id="player2Score">0</span>]</p>
+          <div class="col-xs-8 col-xs-offset-2 scoreBoard">
+            <table>
+              <tr>
+                <th>Player</th>
+                <th>Computer</th>
+              </tr>
+              <tr>
+                <td><span id="player1Score">0</span></td>
+                <td><span id="player2Score">0</span></td>
+              </tr>
+            </table>
           </div>
         </div>
         <!-- This  -->
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 scoreBoard">
+          <div class="col-xs-6 newGame">
             <button id="enterNewGame" name="button">New Game</button>
+          </div>
+          <div class="col-xs-6 newGame">
             <h4 id="editedText3">Start new game</h4>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 display">
-            <h1>Player 1's choise: <span id="editedText1">Choice</span></h1>
-            <h1>VS</h1>
-            <h1>Player 2's choise: <span id="editedText2">Choice</span></h1>
+            <div class="col-xs-12" style="height: 160px; border:solid 1px black;">
+              <h1>Player's choise: <span id="editedText1">Choice</span></h1>
+            </div>
+            <div class="col-xs-12" style="text-align: center; height: 75px; border:solid 1px black;">
+              <h1>VS</h1>
+            </div>
+            <div class="col-xs-12" style="height: 160px; border:solid 1px black;">
+              <h1>Computer's choise: <span id="editedText2">Choice</span></h1>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 turnDisplay">
-            <h3 id="turnText">Players 1's turn</h3>
+            <h3 id="turnText">Ready</h3>
           </div>
         </div>
         <div class="row">
@@ -86,11 +100,18 @@
           </div>
         </div>
       </div>
+      <section class="col-xs-2 saveArea">
+        <h4>Save your score</h4>
+        <div class="saveForm">
+          Name of Game: <input id="nameGame" type="text" name="nameGame" value="nameGame"><br><br>
+          Player 1: <input id="player1" type="text" name="player 1" value="Player1"><br><br>
+          <button id="submit">Submit</button>
+        </div>
+      </section>
     </section>
   </body>
   <!-- JQuery Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- My scripts -->
   <script type="text/javascript" src="../JavaScript/game2Script.js"></script>
-  <script type="text/javascript" src="game2Script.js"></script>
 </html>

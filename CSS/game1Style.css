@@ -14,26 +14,12 @@ body{
 button{
   color:black;
 }
-
-table{
-  border:1px solid black;
-  width:100%;
-  background-color: grey;
-}
-
-th, td{
-  border:1px solid black;
-  width:10px;
-  text-align: center;
-  font-size:25px;
-}
 /* --------------Classes-------------- */
 /* Size of screen */
 .screen{
-  border:solid 1px black;
-  height: 740px;
+  height: 550px;
   padding:20px;
-  background-color: grey;
+  background-color: black;
 }
 
 /* Center Title */
@@ -56,14 +42,14 @@ th, td{
 
 /* Area of where game is shown */
 .display{
-  border:solid 1px black;
-  height: 275px;
+  border:solid 1px white;
+  height: 175px;
   padding: 0px 0px;
 }
 
  /* Style for all innerSquares */
 .innerSquare {
-  maging:0px 0px;
+  margin:0px 0px;
   height: 100%;
   width: 100%;
   background-color: white;
@@ -85,11 +71,42 @@ th, td{
 
 .saveArea{
   border:solid 1px black;
-  height: 250px;
+  height: 300px;
+  width:200px;
   padding:20px;
   background-color: grey;
   color:black;
   margin-top:5px;
   margin-bottom:5px;
+  text-align: center;
+  float:left;
+  margin-left:30px;
+}
+
+.saveArea button{
+  width:100px;
+}
+
+.redTile{
+  border-radius: 400px 0px 0px 0px;
+}
+
+.blueTile{
+  border-radius: 0px 400px 0px 0px;
+}
+
+.yellowTile{
+  border-radius: 0px 0px 400px  0px;
+}
+
+.greenTile{
+  border-radius: 0px 0px 0px 400px;
+}
+
+#updatingTXT1{
+  text-align: center;
+}
+
+#updatingTXT2{
   text-align: center;
 }

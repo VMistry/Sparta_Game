@@ -7,6 +7,7 @@ var playerTurn;
 
 //Make sure the rock, paper, scissors buttons are turned off.
 $(".choseButton").off("click");
+$("#submit").on("click", loginResults);
 //Turn on the new game button to start a new game.
 $("#enterNewGame").on("click", StartRound);
 
@@ -19,7 +20,7 @@ function StartRound(){
   //Show that game is in progress
   $("#editedText3").text("Game in progress....");
   //Show that its player 1's turn.
-  $("#turnText").text("Players 1's turn");
+  $("#turnText").text("Choose your object");
   //set player 1 and player 2 strings to choice, and show.
   player1 = "Choice";
   player2 = "Choice";
@@ -35,8 +36,6 @@ function selectionButton(){
     player1 = this.id;
     //chnage to player 2
     playerTurn++;
-    //show its player 2's turn
-    $("#turnText").text("Players 2's turn");
 
     //Assign selection with player 2
     var computerChoice = Math.floor(Math.random() * 3 + 1);
@@ -110,4 +109,15 @@ function playerChoise(number){
       return "scissors";
       break;
   }
+}
+
+function loginResults(){
+  var currentGame = {};
+
+  var gameID = "RPS_"+ $("#nameGame").val() +"";
+  currentGame["Player1"] = ""+ $("#player1").val() +"";
+  currentGame["p1points"] = player1points;
+  currentGame["p2points"] = player2points;
+  currentGame["totalpoints"] = player1points - player2points;
+  localStorage.setItem(JSON.stringify(gameID), JSON.stringify(currentGame));
 }

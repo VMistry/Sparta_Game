@@ -19,11 +19,24 @@ button{
   margin-top:35px;
 }
 
+table{
+  border:1px solid black;
+  width:100%;
+  background-color: grey;
+}
+
+th, td{
+  border:1px solid black;
+  width:10px;
+  text-align: center;
+  font-size:25px;
+}
+
 /* --------------Classes-------------- */
 /* Size of screen */
 .screen{
   border:solid 1px black;
-  height: 650px;
+  height: 675px;
   padding:0px;
   background-color: grey;
 }
@@ -62,17 +75,18 @@ button{
 
 /* buttons representing rock, paper, scissors */
 .buttonSection{
-  height: 100px;
+  height: 75px;
   padding: 0px 0px;
   text-align: center;
 }
 
 /* Displays how many game won by each player */
 .scoreBoard{
-  height: 50px;
+  height: 75px;
   padding: 5px 0px;
   text-align: center;
 }
+
 
  /* Style for all innerSquares */
 .innerSquare {
@@ -93,6 +107,33 @@ button{
   font-size: 200%;
   float:left;
   margin-left:7.5%;
+}
+
+.saveArea{
+  border:solid 1px black;
+  height: 300px;
+  width:200px;
+  padding:20px;
+  background-color: grey;
+  color:black;
+  margin-top:5px;
+  margin-bottom:5px;
+  text-align: center;
+  float:left;
+  margin-left:30px;
+}
+
+.saveArea button{
+  width:100px;
+}
+
+.newGame{
+  margin:10px 0px;
+  padding-left: 120px;
+}
+.newGame button{
+  width: 200px;
+
 }
 /* -----------------ID----------------- */
 /* This target the new game button, to make it float left */
