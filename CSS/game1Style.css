@@ -64,7 +64,7 @@ button{
 /* This is for the how to play section */
 .howTwoPlay{
   border:solid 1px black;
-  height: 740px;
+  height: auto;
   padding:20px;
   background-color: grey;
 }

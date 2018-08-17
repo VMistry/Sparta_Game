@@ -120,4 +120,5 @@ function loginResults(){
   currentGame["p2points"] = player2points;
   currentGame["totalpoints"] = player1points - player2points;
   localStorage.setItem(JSON.stringify(gameID), JSON.stringify(currentGame));
+  location.reload();
 }
