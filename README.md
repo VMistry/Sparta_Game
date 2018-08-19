@@ -30,9 +30,39 @@ Once we finish the project, we needed to prepare and present what we have made t
 
 ## User Story
 As a user, your should be able to..
-* Navigate throughout the page without any problems. This means going...
+* Navigate throughout the page without any problems...
   * To the right page
-  * 
+  * Able to be seen
+  * Clearly see what page it is linked to
+  * Simple to use (No messing around)
+* Games should be of a high quality...
+ * Should be fun to play
+ * Should be two player
+ * Should have a "How to play" area which is easy to find
+ * Easy to play
+ * Able to login results in to local storage
+ * Have a leader board
+* Easy to access on the website
+* Design of the website should be..
+  * Nice to look at
+  * Be of a consistent..
+    * Colour style
+    * Layout
+    * Background
+* Easy to use overall
+* Simon Says
+ * Game should be able to flash colours in different patterns
+ * The level should be seen during the game
+ * The number of flashes should increase.
+ * Flashes should get faster and faster
+ * Lights should be clickable, once the flashes have stopped
+ * Should be easy to play
+ * Game should stop once one player gets pattern wrong
+* Rock, paper, Scissors
+ * Player should play with computer
+ * Player should see what computer has chosen and if its a win or lose.
+ * Buttons should link player to the right object.
+ * Should be best of 5 
 
 ## Content
 ---
