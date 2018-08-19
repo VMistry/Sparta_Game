@@ -62,13 +62,13 @@ button{
 }
 
 /* This is for the how to play section */
-.howTwoPlay{
-  border:solid 1px black;
+.howToPlay{
+  border-top:solid 1px white;
   height: auto;
-  padding:20px;
-  background-color: grey;
+  padding:10px;
+  background-color: black;
 }
-
+/* This is for the save area of the website */
 .saveArea{
   border:solid 1px black;
   height: 300px;
@@ -82,36 +82,32 @@ button{
   float:left;
   margin-left:30px;
 }
-
+/* This is the style for thew button, used to store the data of the user */
 .saveArea button{
   width:100px;
 }
-
+/* below will allow the layout of the simon says game look like a circle */
+/* This targets the red button of the first game */
 .redTile{
   border-radius: 400px 0px 0px 0px;
 }
-
+/* This targets the blue button of the first game */
 .blueTile{
   border-radius: 0px 400px 0px 0px;
 }
-
+/* This targets the yellow button of the first game */
 .yellowTile{
   border-radius: 0px 0px 400px  0px;
 }
-
+/* This targets the green button of the first game */
 .greenTile{
   border-radius: 0px 0px 0px 400px;
 }
-
+/* This make the text center */
 #updatingTXT1{
   text-align: center;
 }
-
+/* This make the text center */
 #updatingTXT2{
   text-align: center;
-}
-
-#howTwoPlayTxt{
-  background-color:black;
-  font-size: 16px;
 }

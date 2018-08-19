@@ -128,20 +128,16 @@ th, td{
 /* This edits the new game section */
 .newGame{
   margin:10px 0px;
-  padding-left: 120px;
-}
-/* This will edit the button for entering a new game */
-.newGame button{
-  width: 200px;
+  text-align: center;
 
 }
 
 /* This edits the how to play section of the page */
 .howToPlay{
-  border:solid 1px black;
+  border-top:solid 1px white;
   height: auto;
   padding:10px;
-  background-color: grey;
+  background-color: black;
 }
 /* This will hold rock, paper, scissors button */
 .selectorDisplay{
@@ -166,7 +162,8 @@ th, td{
 .choiceTitle{
   background-color:rgba(130,130,130, 0.8);
 }
-
+/* -----------------ID----------------- */
+/* This holds the images/text of what the computer has chosen */
 #computerChoice{
   /* Center and scale the image nicely */
   background-position: left;
@@ -174,6 +171,7 @@ th, td{
   background-size: contain;
   color:white;
 }
+/* This holds the images/text of what the player has chosen */
 #playerChoice{
   /* Center and scale the image nicely */
   background-position: right;
@@ -181,13 +179,12 @@ th, td{
   background-size: contain;
   color:white;
 }
-/* -----------------ID----------------- */
 /* This target the new game button, to make it float left */
 #enterNewGame{
   margin-top:10px;
-  float:left;
+  width:60%;
 }
-
+/* This will display in text what the player has chosen */
 #howToPlayTxt{
   background-color:black;
   font-size: 16px;

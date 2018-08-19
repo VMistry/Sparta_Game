@@ -4,6 +4,7 @@ var player2;
 var player1points = 0;
 var player2points = 0;
 var playerTurn;
+var gamesPlayed = 0;
 
 //Make sure the rock, paper, scissors buttons are turned off.
 $(".choseButton").off("click");
@@ -14,23 +15,27 @@ $("#enterNewGame").on("click", StartRound);
 
 //This will start off the new game by resetting the text and players turn.
 function StartRound(){
-  $("#playerChoice").hide();
-  $("#computerChoice").hide();
-  // Make player 1 start first
-  playerTurn = 1;
-  //turn off make new game button
-  $("#enterNewGame").off("click");
-  //Show that game is in progress
-  $("#editedText3").text("Game in progress....");
-  //Show that its player 1's turn.
-  $("#turnText").text("Choose your object");
-  //set player 1 and player 2 strings to choice, and show.
-  player1 = "Choice";
-  player2 = "Choice";
-  $("#editedText1").text(player1);
-  $("#editedText2").text(player2);
-  //turn on ROCK, PAPER, SCISSORS button.
-  $(".choseButton").on("click", selectionButton);
+  if(gamesPlayed != 5){
+    $("#vsText").hide();
+    $("#playerChoice").hide();
+    $("#computerChoice").hide();
+    // Make player 1 start first
+    playerTurn = 1;
+    //turn off make new game button
+    $("#enterNewGame").off("click");
+    //Show that game is in progress
+    $("#enterNewGame").text("Game in progress....");
+    //Show that its player 1's turn.
+    $("#turnText").text("Round " + (gamesPlayed + 1) + ". Choose your object");
+    //set player 1 and player 2 strings to choice, and show.
+    player1 = "Choice";
+    player2 = "Choice";
+    $("#editedText1").text(player1);
+    $("#editedText2").text(player2);
+    //turn on ROCK, PAPER, SCISSORS button.
+    $(".choseButton").on("click", selectionButton);
+  }
+
 }
 
 //Takes in player 1's and players two input, then checks who won
@@ -55,7 +60,10 @@ function selectionButton(){
     checker(player1, player2);
     //turn off the choice button
     $(".choseButton").off("click");
+    $("#vsText").show();
 }
+
+// Used for selecting the correct background image to match the choice made.
 function backgroundImageChange(divID, player, pos){
   if(pos == "left"){
     if(player == "rock"){
@@ -129,12 +137,16 @@ function checker(player1, player2){
   }
   $("#player1Score").text(player1points);
   $("#player2Score").text(player2points);
-  $("#editedText3").text("Start new game");
+  $("#enterNewGame").text("Start round " + (gamesPlayed + 2));
   $(".choseButton").off("click");
   $("#enterNewGame").on("click", StartRound);
-
+  gamesPlayed++;
+  if(gamesPlayed == 5){
+    $("#enterNewGame").text("Game ended");
+  }
 }
 
+//Checks if number represents rock, paper, scissors.
 function playerChoise(number){
   switch (number) {
     case 1:
@@ -151,6 +163,7 @@ function playerChoise(number){
   }
 }
 
+//Used to collect and store infomation in to localStorage
 function loginResults(){
   var currentGame = {};
 

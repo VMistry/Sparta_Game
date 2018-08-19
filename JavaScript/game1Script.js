@@ -10,7 +10,11 @@ var numberFlash = 1;
 // This will hold the player number, e.g. player one or player 2.
 var player = 1;
 //This holds a boolean value saying if the user has made a mistake.
-var errorFound = false;
+var player1Out = false;
+var player2Out = false;
+
+var sequenceBlink = 2000;
+var blink = 1000;
 
 var winner = "";
 
@@ -38,18 +42,18 @@ async function createLevel(){
   if(player == 1){
     for (var i = 0; i < numberFlash; i++) {
       //Change the colour of the chosen square, and wait 1 second before turning white.
-      colorChanger(arraySequence1[i], 1000);
+      colorChanger(arraySequence1[i], blink);
       //Wait 1 second before looping
-      await sleep(2000);
+      await sleep(sequenceBlink);
     }
   }
   //show the colour, wait 1 second, hide the colour, wait 1 second.
   if(player == 2){
     for (var i = 0; i < numberFlash; i++) {
       //Change the colour of the chosen square, and wait 1 second before turning white.
-      colorChanger(arraySequence2[i], 1000);
+      colorChanger(arraySequence2[i], blink);
       //Wait 1 second before looping
-      await sleep(2000);
+      await sleep(sequenceBlink);
     }
   }
   //Turn off the patternSelector button.
@@ -112,24 +116,33 @@ function clickAction(){
   if(playerInsert.length == numberFlash){
     //Check for errors.
     if(player == 1){
-      errorFound = checkForError(arraySequence1, playerInsert);
+      player1Out = checkForError(arraySequence1, playerInsert);
     }
-    if(player == 2){
-      errorFound = checkForError(arraySequence2, playerInsert);
+    else if(player == 2){
+      player2Out = checkForError(arraySequence2, playerInsert);
     }
     //If there was no mistake, create a new level.
-    if(errorFound != false){
-      if(player == 1){
+    if(player == 2 && (player1Out == true || player2Out == true)){
+      if(player1Out == true && player2Out == false){
         $('#updatingTXT1').text("Player 2 wins");
         clickableOBJ.off("click");
         winner = ""+ $("#player2").val() +"";
+        $("#updatingTXT3").text("End of game");
       }
-      else{
+
+      else if(player1Out == false && player2Out == true){
         $('#updatingTXT1').text("Player 1 wins");
         clickableOBJ.off("click");
         winner = ""+ $("#player1").val() +"";
+        $("#updatingTXT3").text("End of game");
       }
-      $("#updatingTXT3").text("End of game");
+
+      else if(player1Out == true && player2Out == true){
+        $('#updatingTXT1').text("Its a draw");
+        clickableOBJ.off("click");
+        winner = "Drawing game";
+        $("#updatingTXT3").text("End of game");
+      }
     }
     else{
       $("#patternSet").on("click", createLevel);
@@ -151,7 +164,6 @@ function clickAction(){
         $('#updatingTXT1').text("Player " + player + "'s turn");
       }
     }
-    $('#updatingTXT3').text("Ready to Process");
   }
 }
 
@@ -164,7 +176,14 @@ function checkForError(computerInsert, playerInsert){
     //If the input is not the same as the computer generation, made error as true.
     if(computerInsert[i] != playerInsert[i]){
       foundError = true;
+      $("#updatingTXT3").text("Pattern Incorrect (Ready to Process)");
       break;
+    }
+    else{
+      $("#updatingTXT3").text("Pattern Correct (Ready to Process)");
+      if(player == 2)
+      sequenceBlink = sequenceBlink - 20;
+      blink = blink - 10
     }
   }
   return foundError;
@@ -203,6 +222,7 @@ async function colorChanger(div, number){
   }
 }
 
+//This code takes in players information and stores it in to an object.
 function loginResults(){
   var currentGame = {};
   var gameID = "SS_"+ $("#nameGame").val() +"";
@@ -210,10 +230,12 @@ function loginResults(){
   currentGame["Player2"] = ""+ $("#player2").val() +"";
   currentGame["Level"] = numberFlash;
   currentGame["Winner"] = winner;
+  //The object would then be stored in to local store and used on the leader board. Relaod the page when done.
   localStorage.setItem(JSON.stringify(gameID), JSON.stringify(currentGame));
   location.reload();
 }
 
+
 $("#refresh").on("click", function(){
-  location.reload();
+  playerInsert = [];
 });

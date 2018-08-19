@@ -26,6 +26,7 @@ body{
   background-color: rgba(125, 125, 125, 0);(1,1,1,1);
   padding-top: 15px;
 }
+/* This is for displayig the leaderBoard within the website */
 .display{
   border:solid 1px black;
   height: 100%;
@@ -34,7 +35,7 @@ body{
   background-color: grey;
   text-align: center;
 }
-
+/* This is for the header of the website */
 .header{
   background-color: black;
   border-radius: 300px;
@@ -42,24 +43,50 @@ body{
   margin-bottom: 10px;
 }
 
+/* This is to allow the table to be big enought for the website */
 table{
   border:1px solid white;
   width:100%;
   background-color: grey;
 }
-
-th{
-  border:1px solid white;
-  height:10px;
+/* Styles the table head and data */
+td{
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+  height:40px;
+  text-align: center;
+  background-color: rgba(255,255,255,1);
+  font-size:25px;
+}
+th {
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+  height:40px;
   text-align: center;
   background-color: rgba(30,30,30,1);
   font-size:25px;
 }
 
-td{
-  border:1px solid white;
-  height:10px;
-  text-align: center;
-  background-color: rgba(110,110,110,1);
-  font-size:25px;
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabContent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
 }

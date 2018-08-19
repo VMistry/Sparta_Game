@@ -66,13 +66,10 @@
             </table>
           </div>
         </div>
-        <!-- This  -->
+        <!-- This is the game area -->
         <div class="row">
-          <div class="col-xs-6 newGame">
+          <div class="col-xs-12 newGame">
             <button id="enterNewGame" name="button">New Game</button>
-          </div>
-          <div class="col-xs-6 newGame">
-            <h4 id="editedText3">Start new game</h4>
           </div>
         </div>
         <div class="row">
@@ -80,7 +77,7 @@
             <div id="playerChoice" class="col-xs-12 selectorDisplay">
               <h3 class="choiceTitle">Player's choise: <span id="editedText1"></span></h1>
             </div>
-            <div class="col-xs-12 vsDisplay">
+            <div id="vsText" class="col-xs-12 vsDisplay">
               <h1>VS</h1>
             </div>
             <div id="computerChoice" class="col-xs-12 selectorDisplay">
@@ -101,6 +98,7 @@
           </div>
         </div>
       </div>
+      <!-- This is where the player will save there score and display it on the leaderBoard -->
       <section class="col-xs-2 saveArea">
         <h4>Save your score</h4>
         <div class="saveForm">
@@ -110,11 +108,11 @@
         </div>
       </section>
     </section>
+    <!-- This will show instructions on how to play the game -->
     <article class="row">
-      <!-- Move the screen to the center of the page -->
       <div class="col-xs-6 col-xs-offset-3 howToPlay">
         <h3>How to Play</h3>
-        <ol id="howToPlayTxt">
+        <ol>
           <li>To start the game, you would need to press “New Game”. This will start up the function which will unlock buttons for Rock, Paper and Scissor. </li>
           <li>Once you have clicked “New Game”, you would then need to select either the Rock, Paper or scissors button. </li>
           <li>Once you have chosen a button, the computer will generate its own choice. It would then see who won depending on what both you and the computer has chosen. The winner will gain one point.</li>

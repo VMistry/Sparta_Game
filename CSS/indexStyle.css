@@ -1,3 +1,4 @@
+/* --  */
 body{
   /* Get the image */
   background-image: url("../Images/Blackwood.jpg");
@@ -26,12 +27,14 @@ body{
   background-color: rgba(125, 125, 125, 0);(1,1,1,1);
   padding-top: 15px;
 }
+/* This will conatin and display the game */
 .display{
   border:solid 1px black;
   height: 950px;
   padding:20px;
   background-color: grey;
 }
+/* This will hold a paralax image of the first game. */
 .gameOneImage{
   /* Get the image */
   background-image: url("../Images/Game1.png");
@@ -46,6 +49,7 @@ body{
   color:white;
   text-align: center;
 }
+/* This will hold a paralax image of the second game. */
 .gameTwoImage{
   /* Get the image */
   background-image: url("../Images/Game2.png");
@@ -60,6 +64,7 @@ body{
   color:white;
   text-align: center;
 }
+/* This will contain the header which will say what the game image says */
 .imageHeading{
   background-color:black;
 }
