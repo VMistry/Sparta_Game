@@ -1,0 +1,139 @@
+body{
+  /* Get the image */
+  background-image: url("../Images/Blackwood.jpg");
+  background-color: grey;
+  /* Full height */
+  height: 600px;
+  /* Center and scale the image nicely */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+}
+button{
+  color:black;
+}
+/* --------------Classes-------------- */
+/* Size of screen */
+.screen{
+  height: 550px;
+  padding:20px;
+  background-color: black;
+}
+
+/* Center Title */
+.title{
+  margin-top:0px;
+  text-align:center;
+  height: 75px;
+  background-color: rgba(125, 125, 125, 0.5);(1,1,1,1);
+  padding-top: 15px;
+}
+
+/* Name of game */
+.titleSub{
+  margin-top:0px;
+  text-align:center;
+  height: 75px;
+  background-color: rgba(125, 125, 125, 0);(1,1,1,1);
+  padding-top: 15px;
+}
+
+/* Area of where game is shown */
+.display{
+  border:solid 1px white;
+  height: 175px;
+  padding: 0px 0px;
+}
+
+ /* Style for all innerSquares */
+.innerSquare {
+  margin:0px 0px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+/* This will be the area where the buttons for memory game will be placed */
+.buttonArea{
+  margin-top:10px;
+  text-align:center;
+}
+
+/* This is for the how to play section */
+.howToPlay{
+  border-top:solid 1px white;
+  height: auto;
+  padding:10px;
+  background-color: black;
+}
+/* This is for the save area of the website */
+.saveArea{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* This is the style for thew button, used to store the data of the user */
+.saveArea button{
+  width:100px;
+}
+
+.saveContents{
+  background-color: grey;
+  margin: auto;
+  margin-top: 150px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 15%;
+  color:black;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* below will allow the layout of the simon says game look like a circle */
+/* This targets the red button of the first game */
+.redTile{
+  border-radius: 400px 0px 0px 0px;
+}
+/* This targets the blue button of the first game */
+.blueTile{
+  border-radius: 0px 400px 0px 0px;
+}
+/* This targets the yellow button of the first game */
+.yellowTile{
+  border-radius: 0px 0px 400px  0px;
+}
+/* This targets the green button of the first game */
+.greenTile{
+  border-radius: 0px 0px 0px 400px;
+}
+/* This make the text center */
+#updatingTXT1{
+  text-align: center;
+}
+/* This make the text center */
+#updatingTXT2{
+  text-align: center;
+}

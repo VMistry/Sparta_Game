@@ -1,0 +1,217 @@
+/* --------------Tags----------------- */
+body{
+  /* Get the image */
+  background-image: url("../Images/Blackwood.jpg");
+  background-color: grey;
+  /* Full height */
+  height: 600px;
+  /* Center and scale the image nicely */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+}
+/* Links to all buttons within HTML */
+button{
+  color:black;
+  width:30%;
+  margin-top:35px;
+}
+/* This will effect the table tages within the html page */
+table{
+  border:1px solid black;
+  width:100%;
+  background-color: grey;
+}
+/* Thsi will effect the header and data cells within the website */
+th, td{
+  border:1px solid black;
+  width:10px;
+  text-align: center;
+  font-size:25px;
+}
+
+/* --------------Classes-------------- */
+/* Size of screen */
+.screen{
+  height: 675px;
+  padding:0px;
+  background-color: black;
+}
+
+/* Center Title */
+.title{
+  margin-top:0px;
+  text-align:center;
+  height: 75px;
+  background-color: rgba(125, 125, 125, 0.5);(1,1,1,1);
+  padding-top: 15px;
+}
+
+/* Name of game */
+.titleSub{
+  margin-top:0px;
+  text-align:center;
+  height: 75px;
+  background-color: rgba(125, 125, 125, 0);(1,1,1,1);
+  padding-top: 15px;
+}
+
+/* Area of where game is shown */
+.display{
+  border:solid 1px white;
+  height: 400px;
+  padding: 0px 0px;
+}
+
+/* Displays whos turn it is */
+.turnDisplay{
+  height: 50px;
+  padding: 0px 0px;
+  text-align: center;
+}
+
+/* buttons representing rock, paper, scissors */
+.buttonSection{
+  height: 75px;
+  padding: 0px 0px;
+  text-align: center;
+}
+
+/* Displays how many game won by each player */
+.scoreBoard{
+  height: 75px;
+  padding: 5px 0px;
+  text-align: center;
+}
+
+
+ /* Style for all innerSquares */
+.innerSquare {
+  margin:0px 0px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+/* This will be the area where the buttons for rock, paper, scissors will be placed */
+.buttonArea{
+  margin-top:10px;
+  text-align:center;
+}
+
+/* used to display yhe scores at the top */
+.playerScore{
+  font-size: 200%;
+  float:left;
+  margin-left:7.5%;
+}
+/* This will be the area where I will say the players name, result */
+.saveArea{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* This is the style for the buttons within the html */
+.saveArea button{
+  width:100px;
+}
+
+.saveContents{
+  background-color: grey;
+  margin: auto;
+  margin-top: 150px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 15%;
+  color:black;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* This edits the new game section */
+.newGame{
+  margin:10px 0px;
+  text-align: center;
+
+}
+
+/* This edits the how to play section of the page */
+.howToPlay{
+  border-top:solid 1px white;
+  height: auto;
+  padding:10px;
+  background-color: black;
+}
+/* This will hold rock, paper, scissors button */
+.selectorDisplay{
+  height: 160px;
+  border:solid 1px black;
+  padding:0px 0px;
+}
+
+/* This will target all the h3 elements within the selectorDisplay */
+.selectorDisplay h3{
+  margin:0px 0px;
+  height:40px;
+}
+/* This will display the vs area. */
+.vsDisplay{
+  text-align: center;
+  height: 75px;
+  border:solid 1px white;
+  background-color: black;
+}
+/* This will hold what both computer and player have chosen */
+.choiceTitle{
+  background-color:rgba(130,130,130, 0.8);
+}
+/* -----------------ID----------------- */
+/* This holds the images/text of what the computer has chosen */
+#computerChoice{
+  /* Center and scale the image nicely */
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color:white;
+}
+/* This holds the images/text of what the player has chosen */
+#playerChoice{
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color:white;
+}
+/* This target the new game button, to make it float left */
+#enterNewGame{
+  margin-top:10px;
+  width:60%;
+}
+/* This will display in text what the player has chosen */
+#howToPlayTxt{
+  background-color:black;
+  font-size: 16px;
+}

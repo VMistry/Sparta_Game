@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viren's Game</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- My own css -->
+    <link rel="stylesheet" href="../CSS/game1Style.css">
+  </head>
+  <!-- The navbar stretches across the width of the page -->
+  <body class="container-fluid">
+    <!-- First row for the title -->
+    <nav class="navbar-fluid navbar-inverse" data-offset-top="197">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">VM</a>
+        </div>
+        <ul class="nav navbar-nav" style="float:left;">
+          <li class="hidden-xs hidden-sm"><a href="index.html">Home</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game1.html">Simon Says</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game2.html">Rock, Paper, Scissors</a></li>
+          <li class="hidden-xs hidden-sm"><a href="leaderBoard.html">LeaderBoard</a></li>
+          <li class="dropdown" style="width:200px;">
+            <a class="dropdown-toggle dropdown hidden-md hidden-lg" data-toggle="dropdown" href="#">
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" >Home</a></li>
+              <li><a href="Game1.html">Simon Says</a></li>
+              <li><a href="Game2.html">Rock, Paper, Scissors</a></li>
+              <li><a href="leaderBoard.html">LeaderBoard</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="row">
+        <!-- Title of the page -->
+        <h1 class="col-xs-12 title">Viren's Game</h1>
+        <h2 class="col-xs-12 titleSub">Simon Says</h2>
+    </header>
+    <!-- This holds the games -->
+    <section class="row">
+      <!-- Move the screen to the center of the page -->
+      <div class="col-xs-6 col-xs-offset-3 screen">
+        <!-- Updated text to say what level it is and player turn -->
+        <div class="row">
+          <h2 class="col-xs-6" id="updatingTXT1">Player 1's turn</h2>
+          <h2 class="col-xs-6" id="updatingTXT2">Level 1</h2>
+        </div>
+        <!-- Div Buttons for the memory game -->
+        <div class="row">
+          <!-- Red button display -->
+          <div id="red" class="col-xs-3 col-xs-offset-3  display redTile">
+            <div class="innerSquare redTile">
+            </div>
+          </div>
+          <!-- Blue button display -->
+          <div id="blue" class="col-xs-3 display blueTile">
+            <div class="innerSquare blueTile">
+            </div>
+          </div>
+          <!-- Green button display -->
+          <div id="green" class="col-xs-3 col-xs-offset-3 display greenTile">
+            <div class="innerSquare greenTile">
+            </div>
+          </div>
+          <!-- Yellow button display -->
+          <div id="yellow" class="col-xs-3 display yellowTile">
+            <div class="innerSquare yellowTile">
+            </div>
+          </div>
+        </div>
+        <section class="row">
+          <div class="buttonArea">
+            <button id="patternSet">Ready</button>
+            <button id="refresh">Restart pattern</button>
+            <h3 id="updatingTXT3">Ready to Process</h3>
+          </div>
+        </section>
+      </div>
+      <section id="login" class="col-xs-2 saveArea">
+        <div id="popupForm" class="model saveContents">
+          <h4>Save your score</h4>
+          <div class="saveForm">
+            Name of Game: <input id="nameGame" type="text" name="nameGame" placeholder="nameGame"><br><br>
+            Player 1: <input id="player1" type="text" name="player 1" placeholder="Player1"><br><br>
+            Player 2: <input id="player2" type="text" name="player 2" placeholder="Player2"><br><br>
+            <button id="submit">Submit</button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- This is where the how to play infomation will be-->
+    <article class="row">
+      <div class="col-xs-6 col-xs-offset-3 howToPlay">
+        <h3>How to Play</h3>
+        <ol id="howToPlayTxt">
+          <li>To play Simon says, you would first need to click on to ready button.  This will then display a colour sequence, which would then need to be replicate.</li>
+          <li>You would need to wait until the sequence has finished. You will know when it has finished, by seeing the text below changes from “processing…” to “ready”. </li>
+          <li>You would then replicate the sequence by pressing on to the tiles in the order of when they were lit.</li>
+          <li>Once inserting the sequence, the top left text would change. If the text says that opposition has won, you have lost. If this is not the case and it says it’s your oppositions turn, your opposition would then need to follow instructions 1 to 4, until someone gets the sequence wrong.</li>
+          <li>Once someone gets the sequence wrong, you could save your results on the form below. This will allow you to say your name, opponents name and game name to local storage. To start the game again, press refresh, this will refresh the whole game, allowing you to start again.</li>
+        </ol>
+      </div>
+    </article>
+  </body>
+  <!-- JQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- My scripts -->
+  <script type="text/javascript" src="../JavaScript/game1Script.js"></script>
+</html>
