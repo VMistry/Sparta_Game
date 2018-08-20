@@ -25,6 +25,14 @@ var blue = $(".innerSquare", "#blue").css('background-color', 'blue').hide();
 var green = $(".innerSquare", "#green").css('background-color', 'green').hide();
 var yellow = $(".innerSquare", "#yellow").css('background-color', 'yellow').hide();
 
+var modal = document.getElementById('login');
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
 //Start the game by creating the sequence.
 $("#patternSet").on("click", createLevel);
 $("#submit").on("click", loginResults);
@@ -143,6 +151,8 @@ function clickAction(){
         winner = "Drawing game";
         $("#updatingTXT3").text("End of game");
       }
+      //Show Login
+      modal.style.display = "block";
     }
     else{
       $("#patternSet").on("click", createLevel);
@@ -235,6 +245,11 @@ function loginResults(){
   location.reload();
 }
 
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 $("#refresh").on("click", function(){
   playerInsert = [];

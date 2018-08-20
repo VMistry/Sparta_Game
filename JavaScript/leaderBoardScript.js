@@ -64,7 +64,7 @@ function scoreBoard2(){
   });
 
   var Board = "<table>";
-  Board += "<tr><th>Rank</th> <th>Player</th> <th>Player points</th> <th>Computer points</th> <th>Points gained by player</th> </tr>";
+  Board += "<tr><th>Rank</th> <th>Player</th> <th>Player points</th> <th>Computer points</th> <th>Points gained/lost</th> </tr>";
   var i;
   for (i = 0; i < score.length; i++) {
     //gets the top ten people.
