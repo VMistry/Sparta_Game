@@ -1,0 +1,130 @@
+<!-- Get it to do the best out of 5 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viren's Game</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- My own css -->
+
+    <link rel="stylesheet" href="../CSS/game2Style.css">
+  </head>
+  <!-- The navbar stretches across the width of the page -->
+  <body class="container-fluid">
+    <!-- First row for the title -->
+    <nav class="navbar-fluid navbar-inverse" data-offset-top="197">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">VM</a>
+        </div>
+        <ul class="nav navbar-nav" style="float:left;">
+          <li class="hidden-xs hidden-sm"><a href="index.html">Home</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game1.html">Simon Says</a></li>
+          <li class="hidden-xs hidden-sm"><a href="Game2.html">Rock, Paper, Scissors</a></li>
+          <li class="hidden-xs hidden-sm"><a href="leaderBoard.html">LeaderBoard</a></li>
+          <li class="dropdown" style="width:200px;">
+            <a class="dropdown-toggle dropdown hidden-md hidden-lg" data-toggle="dropdown" href="#">
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Game1.html">Simon Says</a></li>
+              <li><a href="Game2.html">Rock, Paper, Scissors</a></li>
+              <li><a href="leaderBoard.html" >LeaderBoard</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="row">
+        <!-- Title of the page -->
+        <h1 class="col-xs-12 title">Viren's Game</h1>
+        <h2 class="col-xs-12 titleSub">Rock, Paper, Scissors</h2>
+    </header>
+    <!-- This holds the games -->
+    <section class="row">
+      <!-- Move the screen to the center of the page -->
+      <div class="col-xs-6 col-xs-offset-3 screen">
+        <div class="row">
+          <div class="col-xs-8 col-xs-offset-2 scoreBoard">
+            <table>
+              <tr>
+                <th>Player</th>
+                <th>Computer</th>
+              </tr>
+              <tr>
+                <td><span id="player1Score">0</span></td>
+                <td><span id="player2Score">0</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- This is the game area -->
+        <div class="row">
+          <div class="col-xs-12 newGame">
+            <button id="enterNewGame" name="button">New Game</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 display">
+            <div id="playerChoice" class="col-xs-12 selectorDisplay">
+              <h3 class="choiceTitle">Player's choise: <span id="editedText1"></span></h1>
+            </div>
+            <div id="vsText" class="col-xs-12 vsDisplay">
+              <h1>VS</h1>
+            </div>
+            <div id="computerChoice" class="col-xs-12 selectorDisplay">
+              <h3 class="choiceTitle">Computer's choise: <span id="editedText2"></span></h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 turnDisplay">
+            <h3 id="turnText">Ready</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 buttonSection">
+            <button class="choseButton" type="button" name="button" id="rock">Rock</button>
+            <button class="choseButton" type="button" name="button" id="paper">Paper</button>
+            <button class="choseButton" type="button" name="button" id="scissors">Scissors</button>
+          </div>
+        </div>
+      </div>
+      <!-- This is where the player will save there score and display it on the leaderBoard -->
+      <section id="login" class="col-xs-2 saveArea">
+        <div id="popupForm" class="model saveContents">
+          <h4>Save your score</h4>
+          <div class="saveForm">
+            Name of Game: <input id="nameGame" type="text" name="nameGame" placeholder="nameGame"><br><br>
+            Player 1: <input id="player1" type="text" name="player 1" placeholder="Player1"><br><br>
+            <button id="submit">Submit</button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- This will show instructions on how to play the game -->
+    <article class="row">
+      <div class="col-xs-6 col-xs-offset-3 howToPlay">
+        <h3>How to Play</h3>
+        <ol>
+          <li>To start the game, you would need to press “New Game”. This will start up the function which will unlock buttons for Rock, Paper and Scissor. </li>
+          <li>Once you have clicked “New Game”, you would then need to select either the Rock, Paper or scissors button. </li>
+          <li>Once you have chosen a button, the computer will generate its own choice. It would then see who won depending on what both you and the computer has chosen. The winner will gain one point.</li>
+          <li>To starts the next game, repeat steps 1 to 4.</li>
+        </ol>
+      </div>
+    </article>
+  </body>
+  <!-- JQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- My scripts -->
+  <script type="text/javascript" src="../JavaScript/game2Script.js"></script>
+</html>

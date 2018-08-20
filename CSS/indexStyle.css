@@ -1,0 +1,78 @@
+/* --  */
+body{
+  /* Get the image */
+  background-image: url("../Images/Blackwood.jpg");
+  background-color: grey;
+  /* Center and scale the image nicely */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+}
+/* Center Title */
+.title{
+  margin-top:0px;
+  text-align:center;
+  height: 75px;
+  background-color: rgba(125, 125, 125, 0.5);(1,1,1,1);
+  padding-top: 15px;
+}
+
+/* Name of game */
+.titleSub{
+  margin-top:0px;
+  text-align:center;
+  height: 75px;
+  background-color: rgba(125, 125, 125, 0);(1,1,1,1);
+  padding-top: 15px;
+}
+/* This will conatin and display the game */
+.display{
+  border:solid 1px black;
+  height: 950px;
+  padding:20px;
+  background-color: grey;
+}
+/* This will hold a paralax image of the first game. */
+.gameOneImage{
+  /* Get the image */
+  background-image: url("../Images/Game1.png");
+  background-color: grey;
+  /* Full height */
+  height: 400px;
+  /* Center and scale the image nicely */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  text-align: center;
+}
+/* This will hold a paralax image of the second game. */
+.gameTwoImage{
+  /* Get the image */
+  background-image: url("../Images/Game2.png");
+  background-color: grey;
+  /* Full height */
+  height: 400px;
+  /* Center and scale the image nicely */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  text-align: center;
+}
+/* This will contain the header which will say what the game image says */
+.imageHeading{
+  background-color:black;
+}
+
+.header{
+  background-color: black;
+  border-radius: 300px;
+  border:solid;
+  margin-bottom: 10px;
+  text-align: center;
+}
