@@ -12,13 +12,7 @@ $("#submit").on("click", loginResults);
 //Turn on the new game button to start a new game.
 $("#enterNewGame").on("click", StartRound);
 
-// var modal = document.getElementById('login');
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
+var modal = document.getElementById('login');
 
 //This will start off the new game by resetting the text and players turn.
 function StartRound(){
