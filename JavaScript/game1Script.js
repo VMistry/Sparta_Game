@@ -108,69 +108,6 @@ function colorChoise(number){
       break;
   }
 }
-
-//triggered when div is clicked on to.
-function clickAction(){
-  //push selected element id in to playerInsert array.
-  playerInsert.push(this.id);
-  colorChanger(this.id, 400);
-  //if statment to check if the user has inserted the right amount of number in to game.
-  if(playerInsert.length == numberFlash){
-    //Check for errors.
-    if(player == 1){
-      player1Out = checkForError(arraySequence1, playerInsert);
-    }
-    else if(player == 2){
-      player2Out = checkForError(arraySequence2, playerInsert);
-    }
-    //If there was no mistake, create a new level.
-    if(player == 2 && (player1Out == true || player2Out == true)){
-      if(player1Out == true && player2Out == false){
-        $('#updatingTXT1').text("Player 2 wins");
-        clickableOBJ.off("click");
-        winner = ""+ $("#player2").val() +"";
-        $("#updatingTXT3").text("End of game");
-      }
-
-      else if(player1Out == false && player2Out == true){
-        $('#updatingTXT1').text("Player 1 wins");
-        clickableOBJ.off("click");
-        winner = ""+ $("#player1").val() +"";
-        $("#updatingTXT3").text("End of game");
-      }
-
-      else if(player1Out == true && player2Out == true){
-        $('#updatingTXT1').text("Its a draw");
-        clickableOBJ.off("click");
-        winner = "Drawing game";
-        $("#updatingTXT3").text("End of game");
-      }
-      //Show Login
-      modal.style.display = "block";
-    }
-    else{
-      $("#patternSet").on("click", createLevel);
-      clickableOBJ.off("click");
-      if(player == 2){
-        //change to player 1
-        player--;
-        //Display message saying its player ones turn.
-        $('#updatingTXT1').text("Player " + player + "'s turn");
-        //Increase the level.
-        numberFlash++;
-        //display what level it is.
-        $('#updatingTXT2').text("Level " + numberFlash);
-      }
-      else{
-        //change to player 1
-        player++;
-        //Display message saying its player ones turn.
-        $('#updatingTXT1').text("Player " + player + "'s turn");
-      }
-    }
-  }
-}
-
 //compare the computer generated array with the array created by player.
 function checkForError(computerInsert, playerInsert){
   //So far no errors detected.
@@ -226,6 +163,69 @@ async function colorChanger(div, number){
   }
 }
 
+//triggered when div is clicked on to.
+function clickAction(){
+  //push selected element id in to playerInsert array.
+  playerInsert.push(this.id);
+  colorChanger(this.id, 400);
+  //if statment to check if the user has inserted the right amount of number in to game.
+  if(playerInsert.length == numberFlash){
+    //Check for errors.
+    if(player == 1){
+      player1Out = checkForError(arraySequence1, playerInsert);
+    }
+    else if(player == 2){
+      player2Out = checkForError(arraySequence2, playerInsert);
+    }
+    //If there was no mistake, create a new level.
+    if(player == 2 && (player1Out == true || player2Out == true)){
+      if(player1Out == true && player2Out == false){
+        $('#updatingTXT1').text("Player 2 wins");
+        clickableOBJ.off("click");
+        winner = "player2";
+        $("#updatingTXT3").text("End of game");
+      }
+
+      else if(player1Out == false && player2Out == true){
+        $('#updatingTXT1').text("Player 1 wins");
+        clickableOBJ.off("click");
+        winner = "player1";
+        $("#updatingTXT3").text("End of game");
+      }
+
+      else if(player1Out == true && player2Out == true){
+        $('#updatingTXT1').text("Its a draw");
+        clickableOBJ.off("click");
+        winner = "Draw";
+        $("#updatingTXT3").text("End of game");
+      }
+      //Show Login
+      modal.style.display = "block";
+      console.log(winner);
+    }
+    else{
+      $("#patternSet").on("click", createLevel);
+      clickableOBJ.off("click");
+      if(player == 2){
+        //change to player 1
+        player--;
+        //Display message saying its player ones turn.
+        $('#updatingTXT1').text("Player " + player + "'s turn");
+        //Increase the level.
+        numberFlash++;
+        //display what level it is.
+        $('#updatingTXT2').text("Level " + numberFlash);
+      }
+      else{
+        //change to player 1
+        player++;
+        //Display message saying its player ones turn.
+        $('#updatingTXT1').text("Player " + player + "'s turn");
+      }
+    }
+  }
+}
+
 //This code takes in players information and stores it in to an object.
 function loginResults(){
   var currentGame = {};
@@ -233,6 +233,15 @@ function loginResults(){
   currentGame["Player1"] = ""+ $("#player1").val() +"";
   currentGame["Player2"] = ""+ $("#player2").val() +"";
   currentGame["Level"] = numberFlash;
+  if(winner == "player1"){
+    winner = ""+ $("#player1").val() +"";
+  }
+  else if(winner == "player2"){
+    winner = ""+ $("#player2").val() +"";
+  }
+  else{
+    winner = winner;
+  }
   currentGame["Winner"] = winner;
   //The object would then be stored in to local store and used on the leader board. Relaod the page when done.
   localStorage.setItem(JSON.stringify(gameID), JSON.stringify(currentGame));
